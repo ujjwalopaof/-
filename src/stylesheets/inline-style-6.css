@@ -1,0 +1,10 @@
+.n-base-close { display: flex; align-items: center; justify-content: center; cursor: pointer; background-color: transparent; color: var(--n-close-icon-color); border-radius: var(--n-close-border-radius); height: var(--n-close-size); width: var(--n-close-size); font-size: var(--n-close-icon-size); outline: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; position: relative; padding: 0px; }
+.n-base-close.n-base-close--absolute { height: var(--n-close-icon-size); width: var(--n-close-icon-size); }
+.n-base-close::before { content: ""; position: absolute; width: var(--n-close-size); height: var(--n-close-size); left: 50%; top: 50%; transform: translateY(-50%) translateX(-50%); transition: inherit; border-radius: inherit; }
+.n-base-close:not(.n-base-close--disabled):hover { color: var(--n-close-icon-color-hover); }
+.n-base-close:not(.n-base-close--disabled):hover::before { background-color: var(--n-close-color-hover); }
+.n-base-close:not(.n-base-close--disabled):focus::before { background-color: var(--n-close-color-hover); }
+.n-base-close:not(.n-base-close--disabled):active { color: var(--n-close-icon-color-pressed); }
+.n-base-close:not(.n-base-close--disabled):active::before { background-color: var(--n-close-color-pressed); }
+.n-base-close.n-base-close--disabled { cursor: not-allowed; color: var(--n-close-icon-color-disabled); background-color: transparent; }
+.n-base-close.n-base-close--round::before { border-radius: 50%; }

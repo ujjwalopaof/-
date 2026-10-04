@@ -1,0 +1,15 @@
+@keyframes rotator { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.n-base-loading { position: relative; line-height: 0; width: 1em; height: 1em; }
+.n-base-loading .n-base-loading__transition-wrapper { position: absolute; width: 100%; height: 100%; }
+.n-base-loading .n-base-loading__transition-wrapper.icon-switch-transition-enter-from, .n-base-loading .n-base-loading__transition-wrapper.icon-switch-transition-leave-to { transform: scale(0.75); left: 0px; top: 0px; opacity: 0; }
+.n-base-loading .n-base-loading__transition-wrapper.icon-switch-transition-enter-to, .n-base-loading .n-base-loading__transition-wrapper.icon-switch-transition-leave-from { transform: scale(1); left: 0px; top: 0px; opacity: 1; }
+.n-base-loading .n-base-loading__transition-wrapper.icon-switch-transition-enter-active, .n-base-loading .n-base-loading__transition-wrapper.icon-switch-transition-leave-active { transform-origin: center center; position: absolute; left: 0px; top: 0px; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.n-base-loading .n-base-loading__placeholder { position: absolute; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%); }
+.n-base-loading .n-base-loading__placeholder.icon-switch-transition-enter-from, .n-base-loading .n-base-loading__placeholder.icon-switch-transition-leave-to { transform: translateX(-50%) translateY(-50%) scale(0.75); left: 50%; top: 50%; opacity: 0; }
+.n-base-loading .n-base-loading__placeholder.icon-switch-transition-enter-to, .n-base-loading .n-base-loading__placeholder.icon-switch-transition-leave-from { transform: scale(1) translateX(-50%) translateY(-50%); left: 50%; top: 50%; opacity: 1; }
+.n-base-loading .n-base-loading__placeholder.icon-switch-transition-enter-active, .n-base-loading .n-base-loading__placeholder.icon-switch-transition-leave-active { transform-origin: center center; position: absolute; left: 50%; top: 50%; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.n-base-loading .n-base-loading__container { animation: 3s linear 0s infinite normal both running rotator; }
+.n-base-loading .n-base-loading__container .n-base-loading__icon { height: 1em; width: 1em; }

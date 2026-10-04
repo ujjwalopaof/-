@@ -1,0 +1,9 @@
+.n-loading-bar-container { z-index: 5999; position: fixed; top: 0px; left: 0px; right: 0px; height: 2px; }
+.n-loading-bar-container.fade-in-transition-enter-active { transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.n-loading-bar-container.fade-in-transition-leave-active { transition: 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.n-loading-bar-container.fade-in-transition-enter-from, .n-loading-bar-container.fade-in-transition-leave-to { opacity: 0; }
+.n-loading-bar-container.fade-in-transition-leave-from, .n-loading-bar-container.fade-in-transition-enter-to { opacity: 1; }
+.n-loading-bar-container .n-loading-bar { width: 100%; transition: max-width 4s linear, background 0.2s linear; height: var(--n-height); }
+.n-loading-bar-container .n-loading-bar.n-loading-bar--starting { background: var(--n-color-loading); }
+.n-loading-bar-container .n-loading-bar.n-loading-bar--finishing { background: var(--n-color-loading); transition: max-width 0.2s linear, background 0.2s linear; }
+.n-loading-bar-container .n-loading-bar.n-loading-bar--error { background: var(--n-color-error); transition: max-width 0.2s linear, background 0.2s linear; }

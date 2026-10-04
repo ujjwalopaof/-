@@ -1,0 +1,19 @@
+import type { JSX } from 'react/jsx-runtime'
+
+import Vertical_ellipsis from './components/icons/Vertical_ellipsis.tsx'
+import Vertical_ellipsis_menu from './components/icons/Vertical_ellipsis_menu.tsx'
+
+import React from 'react';
+
+export const Vertical_ellipsis_menu1 = () => {
+    return (
+<svg data-v-04074ca5={""} xmlns={"http://www.w3.org/2000/svg"} viewBox={"0 0 256 256"} width={"14"} height={"14"} fill={"currentColor"}>
+<g>
+<path d={"M108,60A16,16,0,1,1,92,44,16,16,0,0,1,108,60Zm56,16a16,16,0,1,0-16-16A16,16,0,0,0,164,76ZM92,112a16,16,0,1,0,16,16A16,16,0,0,0,92,112Zm72,0a16,16,0,1,0,16,16A16,16,0,0,0,164,112ZM92,180a16,16,0,1,0,16,16A16,16,0,0,0,92,180Zm72,0a16,16,0,1,0,16,16A16,16,0,0,0,164,180Z"}></path>
+</g>
+</svg>    );
+}
+
+
+
+export default Vertical_ellipsis_menu1

@@ -1,0 +1,5 @@
+.n-text { transition: color .3s var(--n-bezier); color: var(--n-text-color); }
+.n-text.n-text--strong { font-weight: var(--n-font-weight-strong); }
+.n-text.n-text--italic { font-style: italic; }
+.n-text.n-text--underline { text-decoration: underline; }
+.n-text.n-text--code { line-height: 1.4; display: inline-block; font-family: var(--n-font-famliy-mono); transition: color .3s var(--n-bezier),border-color .3s var(--n-bezier),background-color .3s var(--n-bezier); box-sizing: border-box; padding: 0.05em 0.35em 0px; border-radius: var(--n-code-border-radius); font-size: 0.9em; color: var(--n-code-text-color); background-color: var(--n-code-color); border: var(--n-code-border); }

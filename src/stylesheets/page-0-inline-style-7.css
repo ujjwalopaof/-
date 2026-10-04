@@ -1,0 +1,6 @@
+.n-select { z-index: auto; outline: none; width: 100%; position: relative; font-weight: var(--n-font-weight); }
+.n-select-menu { margin: 4px 0px; box-shadow: var(--n-menu-box-shadow); }
+.n-select-menu.fade-in-scale-up-transition-leave-active { transform-origin: inherit; transition: opacity .2s cubic-bezier(.4, 0, 1, 1), transform .2s cubic-bezier(.4, 0, 1, 1) ,background-color .3s var(--n-bezier), box-shadow .3s var(--n-bezier); }
+.n-select-menu.fade-in-scale-up-transition-enter-active { transform-origin: inherit; transition: opacity .2s cubic-bezier(0, 0, .2, 1), transform .2s cubic-bezier(0, 0, .2, 1) ,background-color .3s var(--n-bezier), box-shadow .3s var(--n-bezier); }
+.n-select-menu.fade-in-scale-up-transition-enter-from, .n-select-menu.fade-in-scale-up-transition-leave-to { opacity: 0; transform: scale(0.9); }
+.n-select-menu.fade-in-scale-up-transition-leave-from, .n-select-menu.fade-in-scale-up-transition-enter-to { opacity: 1; transform: scale(1); }

@@ -1,0 +1,28 @@
+.n-switch { height: var(--n-height); min-width: var(--n-width); vertical-align: middle; user-select: none; display: inline-flex; outline: none; justify-content: center; align-items: center; }
+.n-switch .n-switch__children-placeholder { height: var(--n-rail-height); display: flex; flex-direction: column; overflow: hidden; pointer-events: none; visibility: hidden; }
+.n-switch .n-switch__rail-placeholder { display: flex; }
+.n-switch .n-switch__button-placeholder { width: calc(1.75*var(--n-rail-height)); height: var(--n-rail-height); }
+.n-switch .n-base-loading { position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); font-size: calc(var(--n-button-width) - 4px); color: var(--n-loading-color); transition: color .3s var(--n-bezier); }
+.n-switch .n-base-loading.icon-switch-transition-enter-from, .n-switch .n-base-loading.icon-switch-transition-leave-to { transform: translateX(-50%) translateY(-50%) scale(0.75); left: 50%; top: 50%; opacity: 0; }
+.n-switch .n-base-loading.icon-switch-transition-enter-to, .n-switch .n-base-loading.icon-switch-transition-leave-from { transform: scale(1) translateX(-50%) translateY(-50%); left: 50%; top: 50%; opacity: 1; }
+.n-switch .n-base-loading.icon-switch-transition-enter-active, .n-switch .n-base-loading.icon-switch-transition-leave-active { transform-origin: center center; position: absolute; left: 50%; top: 50%; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.n-switch .n-switch__checked, .n-switch .n-switch__unchecked { transition: color .3s var(--n-bezier); color: var(--n-text-color); box-sizing: border-box; position: absolute; white-space: nowrap; top: 0px; bottom: 0px; display: flex; align-items: center; line-height: 1; }
+.n-switch .n-switch__checked { right: 0px; padding-right: calc(1.25*var(--n-rail-height) - var(--n-offset)); }
+.n-switch .n-switch__unchecked { left: 0px; justify-content: flex-end; padding-left: calc(1.25*var(--n-rail-height) - var(--n-offset)); }
+.n-switch:focus .n-switch__rail { box-shadow: var(--n-box-shadow-focus); }
+.n-switch.n-switch--round .n-switch__rail { border-radius: calc(var(--n-rail-height)/2); }
+.n-switch.n-switch--round .n-switch__rail .n-switch__button { border-radius: calc(var(--n-button-height)/2); }
+.n-switch:not(.n-switch--disabled):not(.n-switch--icon).n-switch--rubber-band.n-switch--pressed .n-switch__rail .n-switch__button { max-width: var(--n-button-width-pressed); }
+.n-switch:not(.n-switch--disabled):not(.n-switch--icon).n-switch--rubber-band .n-switch__rail:active .n-switch__button { max-width: var(--n-button-width-pressed); }
+.n-switch:not(.n-switch--disabled):not(.n-switch--icon).n-switch--rubber-band.n-switch--active.n-switch--pressed .n-switch__rail .n-switch__button { left: calc(100% - var(--n-offset) - var(--n-button-width-pressed)); }
+.n-switch:not(.n-switch--disabled):not(.n-switch--icon).n-switch--rubber-band.n-switch--active .n-switch__rail:active .n-switch__button { left: calc(100% - var(--n-offset) - var(--n-button-width-pressed)); }
+.n-switch.n-switch--active .n-switch__rail .n-switch__button { left: calc(100% - var(--n-button-width) - var(--n-offset)); }
+.n-switch .n-switch__rail { overflow: hidden; height: var(--n-rail-height); min-width: var(--n-rail-width); border-radius: var(--n-rail-border-radius); cursor: pointer; position: relative; transition: opacity .3s var(--n-bezier),background .3s var(--n-bezier),box-shadow .3s var(--n-bezier); background-color: var(--n-rail-color); }
+.n-switch .n-switch__rail .n-switch__button-icon { color: var(--n-icon-color); transition: color .3s var(--n-bezier); font-size: calc(var(--n-button-height) - 4px); position: absolute; inset: 0px; display: flex; justify-content: center; align-items: center; line-height: 1; }
+.n-switch .n-switch__rail .n-switch__button-icon.icon-switch-transition-enter-from, .n-switch .n-switch__rail .n-switch__button-icon.icon-switch-transition-leave-to { transform: scale(0.75); left: 0px; top: 0px; opacity: 0; }
+.n-switch .n-switch__rail .n-switch__button-icon.icon-switch-transition-enter-to, .n-switch .n-switch__rail .n-switch__button-icon.icon-switch-transition-leave-from { transform: scale(1); left: 0px; top: 0px; opacity: 1; }
+.n-switch .n-switch__rail .n-switch__button-icon.icon-switch-transition-enter-active, .n-switch .n-switch__rail .n-switch__button-icon.icon-switch-transition-leave-active { transform-origin: center center; position: absolute; left: 0px; top: 0px; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.n-switch .n-switch__rail .n-switch__button { align-items: center; top: var(--n-offset); left: var(--n-offset); height: var(--n-button-height); width: var(--n-button-width-pressed); max-width: var(--n-button-width); border-radius: var(--n-button-border-radius); background-color: var(--n-button-color); box-shadow: var(--n-button-box-shadow); box-sizing: border-box; cursor: inherit; content: ""; position: absolute; transition: background-color .3s var(--n-bezier),left .3s var(--n-bezier),opacity .3s var(--n-bezier),max-width .3s var(--n-bezier),box-shadow .3s var(--n-bezier); }
+.n-switch.n-switch--active .n-switch__rail { background-color: var(--n-rail-color-active); }
+.n-switch.n-switch--loading .n-switch__rail { cursor: wait; }
+.n-switch.n-switch--disabled .n-switch__rail { cursor: not-allowed; opacity: 0.5; }

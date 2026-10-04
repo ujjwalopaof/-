@@ -1,0 +1,6 @@
+.sched-name-required[data-v-d9c23b5c] .n-input__border, .sched-name-required[data-v-d9c23b5c] .n-input__state-border { box-shadow: rgba(224, 72, 72, 0.22) 0px 0px 0px 3px; animation: 1.2s ease-out 0s 2 normal none running sched-name-pulse-d9c23b5c; border-color: rgba(224, 72, 72, 0.85) !important; }
+@keyframes sched-name-pulse-d9c23b5c { 
+  0% { box-shadow: rgba(224, 72, 72, 0.45) 0px 0px; }
+  70% { box-shadow: rgba(224, 72, 72, 0) 0px 0px 0px 8px; }
+  100% { box-shadow: rgba(224, 72, 72, 0) 0px 0px; }
+}
