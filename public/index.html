@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AFK Client</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><span class="logo">◆</span> afkclient<span class="accent">.local</span></div>
+  <div class="label">Your accounts</div>
+  <div id="accounts" class="avatars"></div>
+  <div class="row between label"><span>Servers</span><span id="activeCount" class="muted-strong"></span></div>
+  <div id="servers"></div>
+  <div class="row gap8">
+    <button class="btn outline grow" id="addAccountBtn">Add Account</button>
+    <button class="btn outline grow" id="addServerBtn">Add New Server</button>
+  </div>
+  <div class="spacer"></div>
+  <div class="foot muted" id="storage"></div>
+</aside>
+
+<main class="main">
+  <div id="empty" class="card center pad40 hidden">
+    <h2>No connections yet</h2>
+    <p class="muted">Add an account and a server to get started.</p>
+    <button class="btn primary" id="emptyAdd">Connect Account to Server</button>
+  </div>
+
+  <div id="view" class="hidden">
+    <div class="top">
+      <section class="card overview">
+        <div class="title"><span class="head" id="vHead"></span><b id="vUser"></b><span class="muted"> · </span><span id="vHost" class="muted-strong"></span></div>
+        <div id="offlineMsg" class="center muted pad40">Connect to see this information</div>
+        <div id="liveBox" class="live hidden">
+          <div class="col gap12">
+            <div class="panel">
+              <div class="row gap16"><span><span class="heart">♥</span> <b id="hp"></b></span><span><span class="food">●</span> <b id="fd"></b></span></div>
+              <div class="row gap8 mt8"><span class="star">★</span><b id="lvl"></b><div class="bar"><div id="lvlBar"></div></div><b id="lvlPct"></b></div>
+              <div class="tiny muted mt12">Standing on Block</div><b id="blk" class="small"></b>
+            </div>
+            <div class="panel">
+              <div class="small b mb8">XP</div>
+              <div class="xprow"><span>Session</span><b id="xpS"></b></div>
+              <div class="xprow"><span>Per Hour</span><b id="xpH"></b></div>
+              <div class="xprow"><span>Per Day</span><b id="xpD"></b></div>
+              <div class="xprow"><span>Position</span><b id="pos"></b></div>
+            </div>
+          </div>
+          <div class="col gap12 grow">
+            <div class="panel">
+              <div class="row between"><span class="small b">Inventory</span><span class="tiny muted">Click: select · Right-click: use · Drag: move · Drop zone: drop</span></div>
+              <div class="row gap16 mt8">
+                <div>
+                  <div id="invMain" class="grid9"></div>
+                  <div id="invHot" class="grid9 mt8"></div>
+                </div>
+                <div class="col gap4">
+                  <div id="armor" class="col gap4"></div>
+                  <div id="offhand"></div>
+                  <div id="dropZone" class="drop">Drop</div>
+                </div>
+              </div>
+              <div id="winBox" class="hidden mt12">
+                <div class="row between"><b class="small" id="winTitle"></b><button class="btn xs" id="winClose">Close</button></div>
+                <div id="winSlots" class="grid9 mt8"></div>
+              </div>
+            </div>
+            <div class="panel row gap16 controls">
+              <div><div class="small b">Facing Direction</div>
+                <select id="faceSel" class="input sm"><option value="">-</option><option>north</option><option>south</option><option>east</option><option>west</option></select></div>
+              <div><div class="small b">Sneak Mode</div>
+                <select id="sneakSel" class="input sm"><option value="0">Disabled</option><option value="1">Enabled</option></select></div>
+              <div><div class="small b">Uptime</div><b id="uptime" class="small"></b></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card conn">
+        <div class="row between"><span class="b">Connection Details</span><span id="ping" class="ping"></span></div>
+        <label>Server</label>
+        <div class="row gap8"><input id="cHost" class="input" style="flex:1;min-width:0"><input id="cPort" class="input" type="number" style="width:90px;flex:none"></div>
+        <label>Version</label>
+        <select id="cVersion" class="input"></select>
+        <label>Account Type</label>
+        <select id="cAuth" class="input"><option value="microsoft">Microsoft (Premium)</option><option value="offline">Offline / Cracked</option></select>
+        <label>Auto-Reconnect</label>
+        <div class="row gap8"><input id="cDelay" type="number" class="input w90"><span class="unit">s</span>
+          <select id="cAuto" class="input grow"><option value="1">Enabled</option><option value="0">Disabled</option></select></div>
+        <div class="row gap8 mt12"><button id="connBtn" class="btn primary grow"></button><button id="delBtn" class="btn ghost danger" title="Remove connection">✕</button></div>
+      </section>
+    </div>
+
+    <nav class="tabs card" id="tabs">
+      <button data-tab="chat" class="on">Chat</button><button data-tab="tab">Tab</button><button data-tab="commands">Commands</button>
+      <button data-tab="macros">Macros</button><button data-tab="automations">Automations</button><button data-tab="activity">Activity Log</button><button data-tab="settings">Settings</button>
+    </nav>
+
+    <section data-pane="chat" class="pane">
+      <div class="card chatwrap">
+        <div class="chatcol">
+          <div class="row between pad8 bb"><span></span><input id="chatSearch" class="input sm w200" placeholder="Search"></div>
+          <div id="chatLog" class="log"></div>
+          <form id="chatForm" class="row gap8 pad8"><input id="chatIn" class="input grow" placeholder="Type a message or /command..." autocomplete="off"><button class="btn primary">Send</button></form>
+        </div>
+        <div id="sidebar" class="sb"></div>
+      </div>
+    </section>
+    <section data-pane="tab" class="pane hidden"><div class="card pad16"><div id="tabList" class="tablist"></div></div></section>
+    <section data-pane="commands" class="pane hidden">
+      <div class="card pad16">
+        <p class="muted small">Quick commands shared across accounts. Click to send on this connection.</p>
+        <div id="cmdList" class="row wrap gap8"></div>
+        <form id="cmdForm" class="row gap8 mt12"><input id="cmdIn" class="input grow" placeholder="/command"><button class="btn primary">Add</button></form>
+      </div>
+    </section>
+    <section data-pane="macros" class="pane hidden">
+      <div class="row between"><p class="muted small">Shared across accounts. Toggle enables the macro for this connection.</p><button class="btn primary" id="newMacro">New Macro</button></div>
+      <div id="macroList" class="col gap8 mt8"></div>
+      <div class="card pad16 mt16"><div class="b mb8">Macro Log</div><input class="input" placeholder="Search logs..." data-filter="macroLog"><div id="macroLog" class="log short mt8"></div></div>
+    </section>
+    <section data-pane="automations" class="pane hidden">
+      <div class="label accent">Featured automations for DonutSMP.net</div>
+      <div id="autoFeatured" class="autogrid"></div>
+      <div class="label mt16">General</div>
+      <div id="autoOther" class="autogrid"></div>
+      <div class="card pad16 mt16"><div class="b mb8">Automation Log</div><input class="input" placeholder="Search logs..." data-filter="autoLog"><div id="autoLog" class="log short mt8"></div></div>
+    </section>
+    <section data-pane="activity" class="pane hidden"><div class="card pad16"><div id="activityLog" class="log"></div></div></section>
+    <section data-pane="settings" class="pane hidden">
+      <div class="card pad16 col gap8 w480">
+        <label>Username</label><input id="sUser" class="input">
+        <p class="muted small">Microsoft accounts sign in with a device code shown in chat on first connect. Tokens are cached in <code>data/auth</code>.</p>
+        <button class="btn primary" id="sSave">Save</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<div id="modal" class="modal hidden"><div class="mbox" id="mbox"></div></div>
+<div id="toast" class="toast hidden"></div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
