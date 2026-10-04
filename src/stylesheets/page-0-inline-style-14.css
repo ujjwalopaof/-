@@ -1,0 +1,5 @@
+.n-icon { height: 1em; width: 1em; line-height: 1em; text-align: center; display: inline-block; position: relative; fill: currentcolor; }
+.n-icon.n-icon--color-transition { transition: color .3s var(--n-bezier); }
+.n-icon.n-icon--depth { color: var(--n-color); }
+.n-icon.n-icon--depth svg { opacity: var(--n-opacity); transition: opacity .3s var(--n-bezier); }
+.n-icon svg { height: 1em; width: 1em; }

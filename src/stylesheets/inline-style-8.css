@@ -1,0 +1,16 @@
+@keyframes spin-rotate { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.n-spin-container { position: relative; }
+.n-spin-container .n-spin-body { position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); }
+.n-spin-container .n-spin-body.fade-in-transition-enter-active { transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.n-spin-container .n-spin-body.fade-in-transition-leave-active { transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.n-spin-container .n-spin-body.fade-in-transition-enter-from, .n-spin-container .n-spin-body.fade-in-transition-leave-to { opacity: 0; }
+.n-spin-container .n-spin-body.fade-in-transition-leave-from, .n-spin-container .n-spin-body.fade-in-transition-enter-to { opacity: 1; }
+.n-spin-body { display: inline-flex; align-items: center; justify-content: center; flex-direction: column; }
+.n-spin { display: inline-flex; height: var(--n-size); width: var(--n-size); font-size: var(--n-size); color: var(--n-color); }
+.n-spin.n-spin--rotate { animation: 2s linear 0s infinite normal none running spin-rotate; }
+.n-spin-description { display: inline-block; font-size: var(--n-font-size); color: var(--n-text-color); transition: color .3s var(--n-bezier); margin-top: 8px; }
+.n-spin-content { opacity: 1; transition: opacity .3s var(--n-bezier); pointer-events: all; }
+.n-spin-content.n-spin-content--spinning { user-select: none; pointer-events: none; opacity: var(--n-opacity-spinning); }

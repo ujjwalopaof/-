@@ -1,0 +1,48 @@
+.n-button { margin: 0px; font-weight: var(--n-font-weight); line-height: 1; font-family: inherit; padding: var(--n-padding); height: var(--n-height); font-size: var(--n-font-size); border-radius: var(--n-border-radius); color: var(--n-text-color); background-color: var(--n-color); width: var(--n-width); white-space: nowrap; outline: none; position: relative; z-index: auto; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; display: inline-flex; flex-wrap: nowrap; flex-shrink: 0; align-items: center; justify-content: center; user-select: none; text-align: center; cursor: pointer; text-decoration: none; transition: color .3s var(--n-bezier),
+ background-color .3s var(--n-bezier),
+ opacity .3s var(--n-bezier),
+ border-color .3s var(--n-bezier); }
+.n-button.n-button--color .n-button__border { border-color: var(--n-border-color); }
+.n-button.n-button--color.n-button--disabled .n-button__border { border-color: var(--n-border-color-disabled); }
+.n-button.n-button--color:not(.n-button--disabled):focus .n-button__state-border { border-color: var(--n-border-color-focus); }
+.n-button.n-button--color:not(.n-button--disabled):hover .n-button__state-border { border-color: var(--n-border-color-hover); }
+.n-button.n-button--color:not(.n-button--disabled):active .n-button__state-border { border-color: var(--n-border-color-pressed); }
+.n-button.n-button--color:not(.n-button--disabled).n-button--pressed .n-button__state-border { border-color: var(--n-border-color-pressed); }
+.n-button.n-button--disabled { background-color: var(--n-color-disabled); color: var(--n-text-color-disabled); }
+.n-button.n-button--disabled .n-button__border { border: var(--n-border-disabled); }
+.n-button:not(.n-button--disabled):focus { background-color: var(--n-color-focus); color: var(--n-text-color-focus); }
+.n-button:not(.n-button--disabled):focus .n-button__state-border { border: var(--n-border-focus); }
+.n-button:not(.n-button--disabled):hover { background-color: var(--n-color-hover); color: var(--n-text-color-hover); }
+.n-button:not(.n-button--disabled):hover .n-button__state-border { border: var(--n-border-hover); }
+.n-button:not(.n-button--disabled):active { background-color: var(--n-color-pressed); color: var(--n-text-color-pressed); }
+.n-button:not(.n-button--disabled):active .n-button__state-border { border: var(--n-border-pressed); }
+.n-button:not(.n-button--disabled).n-button--pressed { background-color: var(--n-color-pressed); color: var(--n-text-color-pressed); }
+.n-button:not(.n-button--disabled).n-button--pressed .n-button__state-border { border: var(--n-border-pressed); }
+.n-button.n-button--loading { cursor: wait; }
+.n-button .n-base-wave { pointer-events: none; inset: 0px; animation-iteration-count: 1; animation-duration: var(--n-ripple-duration); animation-timing-function: var(--n-bezier-ease-out), var(--n-bezier-ease-out); }
+.n-button .n-base-wave.n-base-wave--active { z-index: 1; animation-name: button-wave-spread, button-wave-opacity; }
+.n-button .n-button__border, .n-button .n-button__state-border { position: absolute; inset: 0px; border-radius: inherit; transition: border-color .3s var(--n-bezier); pointer-events: none; }
+.n-button .n-button__border { border: var(--n-border); }
+.n-button .n-button__state-border { border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; border-color: rgba(0, 0, 0, 0); z-index: 1; }
+.n-button .n-button__icon { margin-top: ; margin-right: ; margin-bottom: ; margin-left: 0px; height: var(--n-icon-size); width: var(--n-icon-size); max-width: var(--n-icon-size); font-size: var(--n-icon-size); position: relative; flex-shrink: 0; }
+.n-button .n-button__icon .n-icon-slot { height: var(--n-icon-size); width: var(--n-icon-size); position: absolute; left: 0px; top: 50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; }
+.n-button .n-button__icon .n-icon-slot.icon-switch-transition-enter-from, .n-button .n-button__icon .n-icon-slot.icon-switch-transition-leave-to { transform: translateY(-50%) scale(0.75); left: 0px; top: 50%; opacity: 0; }
+.n-button .n-button__icon .n-icon-slot.icon-switch-transition-enter-to, .n-button .n-button__icon .n-icon-slot.icon-switch-transition-leave-from { transform: scale(1) translateY(-50%); left: 0px; top: 50%; opacity: 1; }
+.n-button .n-button__icon .n-icon-slot.icon-switch-transition-enter-active, .n-button .n-button__icon .n-icon-slot.icon-switch-transition-leave-active { transform-origin: center center; position: absolute; left: 0px; top: 50%; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+.n-button .n-button__icon.fade-in-width-expand-transition-leave-from, .n-button .n-button__icon.fade-in-width-expand-transition-enter-to { opacity: 1; }
+.n-button .n-button__icon.fade-in-width-expand-transition-leave-to, .n-button .n-button__icon.fade-in-width-expand-transition-enter-from { opacity: 0 !important; margin-left: 0px !important; margin-right: 0px !important; }
+.n-button .n-button__icon.fade-in-width-expand-transition-leave-active { overflow: hidden; transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, margin-right 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s; }
+.n-button .n-button__icon.fade-in-width-expand-transition-enter-active { overflow: hidden; transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, max-width 0.2s cubic-bezier(0.4, 0, 0.2, 1), margin-left 0.2s cubic-bezier(0.4, 0, 0.2, 1), margin-right 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+.n-button .n-button__content { display: flex; align-items: center; flex-wrap: nowrap; min-width: 0px; }
+.n-button .n-button__content ~ .n-button__icon { margin-top: ; margin-bottom: ; margin-left: ; margin-right: 0px; }
+.n-button.n-button--block { display: flex; width: 100%; }
+.n-button.n-button--dashed .n-button__border, .n-button.n-button--dashed .n-button__state-border { border-style: dashed !important; }
+.n-button.n-button--disabled { cursor: not-allowed; opacity: var(--n-opacity-disabled); }
+@keyframes button-wave-spread { 
+  0% { box-shadow: 0 0 0.5px 0 var(--n-ripple-color); }
+  100% { box-shadow: 0 0 0.5px 4.5px var(--n-ripple-color); }
+}
+@keyframes button-wave-opacity { 
+  0% { opacity: var(--n-wave-opacity); }
+  100% { opacity: 0; }
+}

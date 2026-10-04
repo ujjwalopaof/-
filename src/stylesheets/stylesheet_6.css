@@ -1,0 +1,9 @@
+.lct-version-modal[data-v-916cb3b5] { display: flex; flex-direction: column; gap: 14px; }
+.lct-version-header[data-v-916cb3b5] { display: flex; align-items: flex-start; gap: 12px; }
+.lct-version-icon[data-v-916cb3b5] { flex-shrink: 0; color: rgb(99, 226, 183); margin-top: 2px; }
+.lct-version-heading[data-v-916cb3b5] { display: flex; flex-direction: column; gap: 4px; }
+.lct-version-title[data-v-916cb3b5] { font-size: 16px; font-weight: 600; color: rgb(255, 255, 255); line-height: 1.35; }
+.lct-version-subtitle[data-v-916cb3b5] { font-size: 13px; color: rgb(170, 170, 170); line-height: 1.4; }
+.lct-version-body[data-v-916cb3b5] { margin: 0px; font-size: 13px; color: rgb(204, 204, 204); line-height: 1.5; }
+.lct-version-body strong[data-v-916cb3b5] { color: rgb(255, 255, 255); font-weight: 600; }
+.lct-version-actions[data-v-916cb3b5] { display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px; }

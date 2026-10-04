@@ -1,0 +1,5 @@
+.n-empty { display: flex; flex-direction: column; align-items: center; font-size: var(--n-font-size); }
+.n-empty .n-empty__icon { width: var(--n-icon-size); height: var(--n-icon-size); font-size: var(--n-icon-size); line-height: var(--n-icon-size); color: var(--n-icon-color); transition: color .3s var(--n-bezier); }
+.n-empty .n-empty__icon + .n-empty__description { margin-top: 8px; }
+.n-empty .n-empty__description { transition: color .3s var(--n-bezier); color: var(--n-text-color); }
+.n-empty .n-empty__extra { text-align: center; transition: color .3s var(--n-bezier); margin-top: 12px; color: var(--n-extra-text-color); }

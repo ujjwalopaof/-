@@ -1,0 +1,3 @@
+.n-form.n-form--inline { width: 100%; display: inline-flex; align-items: flex-start; align-content: space-around; }
+.n-form.n-form--inline .n-form-item { width: auto; margin-right: 18px; }
+.n-form.n-form--inline .n-form-item:last-child { margin-right: 0px; }

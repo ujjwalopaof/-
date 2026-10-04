@@ -1,0 +1,5 @@
+.n-layout { color: var(--n-text-color); background-color: var(--n-color); box-sizing: border-box; position: relative; z-index: auto; flex: 1 1 auto; overflow: hidden; transition: box-shadow .3s var(--n-bezier),
+ background-color .3s var(--n-bezier),
+ color .3s var(--n-bezier); }
+.n-layout .n-layout-scroll-container { overflow-x: hidden; box-sizing: border-box; height: 100%; }
+.n-layout.n-layout--absolute-positioned { position: absolute; inset: 0px; }

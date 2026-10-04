@@ -1,0 +1,16 @@
+.n-modal-container { position: fixed; left: 0px; top: 0px; height: 0px; width: 0px; display: flex; }
+.n-modal-mask { position: fixed; inset: 0px; background-color: rgba(0, 0, 0, 0.4); }
+.n-modal-mask.fade-in-transition-enter-active { transition: all .25s var(--n-bezier-ease-out) !important; }
+.n-modal-mask.fade-in-transition-leave-active { transition: all .25s var(--n-bezier-ease-out) !important; }
+.n-modal-mask.fade-in-transition-enter-from, .n-modal-mask.fade-in-transition-leave-to { opacity: 0; }
+.n-modal-mask.fade-in-transition-leave-from, .n-modal-mask.fade-in-transition-enter-to { opacity: 1; }
+.n-modal-body-wrapper { position: fixed; inset: 0px; overflow: visible; }
+.n-modal-body-wrapper .n-modal-scroll-content { min-height: 100%; display: flex; position: relative; }
+.n-modal-body-wrapper.n-modal-body-wrapper--mask-hidden { pointer-events: none; }
+.n-modal-body-wrapper.n-modal-body-wrapper--mask-hidden .n-modal-scroll-content > * { pointer-events: all; }
+.n-modal { position: relative; align-self: center; color: var(--n-text-color); margin: auto; box-shadow: var(--n-box-shadow); }
+.n-modal.fade-in-scale-up-transition-leave-active { transform-origin: inherit; transition: opacity 0.25s cubic-bezier(0.4, 0, 1, 1), transform 0.25s cubic-bezier(0.4, 0, 1, 1); }
+.n-modal.fade-in-scale-up-transition-enter-active { transform-origin: inherit; transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1), transform 0.25s cubic-bezier(0, 0, 0.2, 1); }
+.n-modal.fade-in-scale-up-transition-enter-from, .n-modal.fade-in-scale-up-transition-leave-to { opacity: 0; transform: scale(0.5); }
+.n-modal.fade-in-scale-up-transition-leave-from, .n-modal.fade-in-scale-up-transition-enter-to { opacity: 1; transform: scale(1); }
+.n-modal .n-draggable { cursor: move; user-select: none; }

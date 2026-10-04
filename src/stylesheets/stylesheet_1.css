@@ -1,0 +1,53 @@
+.activity-log-tab[data-v-cef28e8e] { padding: 4px 0px; }
+.activity-bot-banner[data-v-cef28e8e] { display: flex; align-items: center; gap: 10px; padding: 10px 12px; margin-bottom: 10px; border-radius: 8px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); }
+.activity-bot-banner.banner-online[data-v-cef28e8e] { border-color: rgba(46, 204, 113, 0.25); }
+.banner-head[data-v-cef28e8e] { width: 28px; height: 28px; border-radius: 5px; flex-shrink: 0; image-rendering: pixelated; }
+.banner-info[data-v-cef28e8e] { flex: 1 1 0%; min-width: 0px; }
+.banner-title-row[data-v-cef28e8e] { display: flex; align-items: center; gap: 8px; }
+.banner-username[data-v-cef28e8e] { font-size: 13px; font-weight: 600; color: rgba(255, 255, 255, 0.85); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.banner-status[data-v-cef28e8e] { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600; }
+.banner-status.status-online[data-v-cef28e8e] { color: rgb(46, 204, 113); }
+.banner-status.status-offline[data-v-cef28e8e] { color: rgba(231, 76, 60, 0.7); }
+.banner-status-dot[data-v-cef28e8e] { width: 6px; height: 6px; border-radius: 50%; background: currentcolor; }
+.banner-note[data-v-cef28e8e] { font-size: 11px; color: rgba(255, 255, 255, 0.35); margin-top: 2px; }
+.banner-stats[data-v-cef28e8e] { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.activity-log-header[data-v-cef28e8e] { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; padding: 0px 2px; }
+.activity-search[data-v-cef28e8e] { flex: 1 1 0%; max-width: 320px; }
+.activity-type-filter[data-v-cef28e8e] { width: 160px; flex-shrink: 0; }
+.stat-item[data-v-cef28e8e] { display: inline-flex; align-items: center; gap: 2px; font-size: 11px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.stat-online-time[data-v-cef28e8e] { color: rgba(46, 204, 113, 0.7); }
+.stat-reconnects[data-v-cef28e8e] { color: rgba(241, 196, 15, 0.7); }
+.stat-offline-time[data-v-cef28e8e] { color: rgba(155, 89, 182, 0.7); }
+.activity-log-empty[data-v-cef28e8e] { text-align: center; padding: 40px 16px; color: rgba(255, 255, 255, 0.35); font-size: 13px; line-height: 1.6; }
+.activity-log-list[data-v-cef28e8e] { display: flex; flex-direction: column; gap: 2px; }
+.activity-log-entry[data-v-cef28e8e] { display: flex; gap: 10px; padding: 8px 10px; border-radius: 6px; background: rgba(255, 255, 255, 0.03); transition: background 0.15s; }
+.activity-log-entry[data-v-cef28e8e]:hover { background: rgba(255, 255, 255, 0.06); }
+.activity-icon-col[data-v-cef28e8e] { display: flex; align-items: flex-start; padding-top: 2px; }
+.activity-icon[data-v-cef28e8e] { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.icon-join[data-v-cef28e8e] { background: rgba(46, 204, 113, 0.15); color: rgb(46, 204, 113); }
+.icon-reconnect_join[data-v-cef28e8e] { background: rgba(52, 152, 219, 0.15); color: rgb(52, 152, 219); }
+.icon-reconnect[data-v-cef28e8e] { background: rgba(241, 196, 15, 0.15); color: rgb(241, 196, 15); }
+.icon-kicked[data-v-cef28e8e] { background: rgba(231, 76, 60, 0.15); color: rgb(231, 76, 60); }
+.icon-kicked_to_lobby[data-v-cef28e8e] { background: rgba(230, 126, 34, 0.15); color: rgb(230, 126, 34); }
+.icon-disconnect[data-v-cef28e8e] { background: rgba(155, 89, 182, 0.15); color: rgb(155, 89, 182); }
+.icon-world_change[data-v-cef28e8e] { background: rgba(52, 152, 219, 0.15); color: rgb(52, 152, 219); }
+.icon-death[data-v-cef28e8e] { background: rgba(192, 57, 43, 0.18); color: rgb(255, 107, 94); }
+.activity-content[data-v-cef28e8e] { flex: 1 1 0%; min-width: 0px; }
+.activity-top-row[data-v-cef28e8e] { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.activity-label[data-v-cef28e8e] { font-size: 12.5px; font-weight: 600; color: rgba(255, 255, 255, 0.85); }
+.activity-type-join .activity-label[data-v-cef28e8e] { color: rgb(46, 204, 113); }
+.activity-type-reconnect_join .activity-label[data-v-cef28e8e] { color: rgb(52, 152, 219); }
+.activity-type-reconnect .activity-label[data-v-cef28e8e] { color: rgb(241, 196, 15); }
+.activity-type-kicked .activity-label[data-v-cef28e8e] { color: rgb(231, 76, 60); }
+.activity-type-kicked_to_lobby .activity-label[data-v-cef28e8e] { color: rgb(230, 126, 34); }
+.activity-type-disconnect .activity-label[data-v-cef28e8e] { color: rgb(155, 89, 182); }
+.activity-type-world_change .activity-label[data-v-cef28e8e] { color: rgb(52, 152, 219); }
+.activity-type-death .activity-label[data-v-cef28e8e] { color: rgb(255, 107, 94); }
+.activity-time[data-v-cef28e8e] { font-size: 11px; color: rgba(255, 255, 255, 0.35); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.activity-message[data-v-cef28e8e] { font-size: 12.5px; color: rgba(255, 255, 255, 0.55); margin-top: 1px; line-height: 1.4; word-break: break-word; }
+.activity-message-mc[data-v-cef28e8e] { font-family: Minecraft, "SF Mono", Consolas, monospace; }
+.activity-meta-row[data-v-cef28e8e] { display: flex; align-items: center; gap: 10px; margin-top: 3px; }
+.activity-duration[data-v-cef28e8e] { display: inline-flex; align-items: center; gap: 3px; font-size: 11px; color: rgba(255, 255, 255, 0.35); font-variant-numeric: tabular-nums; }
+.activity-ram[data-v-cef28e8e] { display: inline-flex; align-items: center; gap: 3px; font-size: 11px; color: rgba(255, 255, 255, 0.3); font-variant-numeric: tabular-nums; }
+.activity-item-enter-active[data-v-cef28e8e] { transition: 0.25s; }
+.activity-item-enter-from[data-v-cef28e8e] { opacity: 0; transform: translateY(-8px); }

@@ -1,0 +1,20 @@
+.n-dialog { --n-icon-margin: var(--n-icon-margin-top) var(--n-icon-margin-right) var(--n-icon-margin-bottom) var(--n-icon-margin-left); word-break: break-word; line-height: var(--n-line-height); position: relative; background: var(--n-color); color: var(--n-text-color); box-sizing: border-box; margin: auto; border-radius: var(--n-border-radius); padding: var(--n-padding); transition: border-color .3s var(--n-bezier),background-color .3s var(--n-bezier),color .3s var(--n-bezier); }
+.n-dialog .n-dialog__icon { color: var(--n-icon-color); }
+.n-dialog.n-dialog--bordered { border: var(--n-border); }
+.n-dialog.n-dialog--icon-top .n-dialog__close { margin: var(--n-close-margin); }
+.n-dialog.n-dialog--icon-top .n-dialog__icon { margin: var(--n-icon-margin); }
+.n-dialog.n-dialog--icon-top .n-dialog__content { text-align: center; }
+.n-dialog.n-dialog--icon-top .n-dialog__title { justify-content: center; }
+.n-dialog.n-dialog--icon-top .n-dialog__action { justify-content: center; }
+.n-dialog.n-dialog--icon-left .n-dialog__icon { margin: var(--n-icon-margin); }
+.n-dialog.n-dialog--icon-left.n-dialog--closable .n-dialog__title { padding-right: calc(var(--n-close-size) + 6px); }
+.n-dialog .n-dialog__close { position: absolute; right: 0px; top: 0px; margin: var(--n-close-margin); transition: background-color .3s var(--n-bezier),color .3s var(--n-bezier); z-index: 1; }
+.n-dialog .n-dialog__content { font-size: var(--n-font-size); margin: var(--n-content-margin); position: relative; word-break: break-word; }
+.n-dialog .n-dialog__content.n-dialog__content--last { margin-bottom: 0px; }
+.n-dialog .n-dialog__action { display: flex; justify-content: flex-end; }
+.n-dialog .n-dialog__action > :not(:last-child) { margin-right: var(--n-action-space); }
+.n-dialog .n-dialog__icon { font-size: var(--n-icon-size); transition: color .3s var(--n-bezier); }
+.n-dialog .n-dialog__title { transition: color .3s var(--n-bezier); display: flex; align-items: center; font-size: var(--n-title-font-size); font-weight: var(--n-title-font-weight); color: var(--n-title-text-color); }
+.n-dialog .n-dialog-icon-container { display: flex; justify-content: center; }
+.n-modal .n-dialog, .n-drawer .n-dialog { width: 446px; max-width: calc(-32px + 100vw); }
+.n-dialog.n-modal { width: 446px; max-width: calc(-32px + 100vw); }
